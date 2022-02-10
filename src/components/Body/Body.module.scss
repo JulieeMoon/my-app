@@ -1,39 +1,50 @@
 .bg1 {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+height: 100%;
     background-color: rgba(194, 194, 194, 0.21)
 }
 
 .bg2 {
+    flex: 1 1 auto;
     display: flex;
-    width: 90%;
-}
-
-.bg3 {
-    display: flex;
-    padding-right: 3%;
-    padding-left: 3%;
-    min-height: 100vh;
+    align-items: center;
+    max-width: 1540px;
+    height: 100%;
     background-color: rgba(194, 194, 194, 0.21);
 }
 
+.bg2 .container {
+    display: flex;
+    max-width: 1500px;
+    min-height: 1200px;
+    margin-right: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.inside {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
 .body1 {
+    flex: 0 0;
+    display: flex;
     max-width: 30%;
-    padding-right: 60px;
-    padding-left: 50px;
-    padding-top: 20px;
-    margin-right: 2%;
+    min-width: 500px;
+    margin-right: 20px;
     text-align: justify;
     background: #D8D8D8;
 }
 
 .body2 {
-    flex: 0 1 auto;
-    padding-right: 60px;
-    padding-left: 50px;
-    padding-top: 20px;
+    flex: 1 1 auto;
+    display: flex;
+    min-width: 200px;
     text-align: justify;
     background: #D8D8D8;
 }
