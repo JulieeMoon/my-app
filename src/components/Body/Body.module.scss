@@ -3,23 +3,21 @@
     flex: 1 1 auto;
     flex-direction: column;
     align-items: center;
-height: 100%;
     background-color: rgba(194, 194, 194, 0.21)
 }
 
 .bg2 {
     flex: 1 1 auto;
     display: flex;
-    align-items: center;
     max-width: 1540px;
-    height: 100%;
     background-color: rgba(194, 194, 194, 0.21);
+    width: 100%;
+
 }
 
 .bg2 .container {
     display: flex;
-    max-width: 1500px;
-    min-height: 1200px;
+    width: 1500px;
     margin-right: 20px;
     margin-left: 20px;
     overflow: hidden;
@@ -34,7 +32,6 @@ height: 100%;
 .body1 {
     flex: 0 0;
     display: flex;
-    max-width: 30%;
     min-width: 500px;
     margin-right: 20px;
     text-align: justify;
@@ -44,7 +41,6 @@ height: 100%;
 .body2 {
     flex: 1 1 auto;
     display: flex;
-    min-width: 200px;
     text-align: justify;
     background: #D8D8D8;
 }
