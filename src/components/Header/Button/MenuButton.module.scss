@@ -1,4 +1,4 @@
-.link {
+.button {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -18,9 +18,18 @@
     background: #6579AE;
   }
 
-  & span:hover {
-    transition: all .7s ease-in-out;
-    box-shadow: 0 0 10px rgba(97, 195, 232, 0.88);
-    background: #334883;
+  &:hover {
+    & span {
+      transition: all .7s ease-in-out;
+      box-shadow: 0 0 10px rgba(97, 195, 232, 0.88);
+      background: #334883;
+    }
   }
 }
+
+.active {
+  transition: all .7s ease-in-out;
+  box-shadow: 0 0 10px rgba(142, 97, 232, 0.88);
+  background: #4e3383;
+}
+

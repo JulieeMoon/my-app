@@ -2,6 +2,7 @@ import * as React from "react";
 import {Header} from "./components/Header/Header";
 import {Footer} from "./components/Footer/Footer";
 import {Body} from "./components/Body/Body";
+// @ts-ignore
 import s from './index.module.scss';
 import {News} from "./components/Header/News";
 import {Message} from "./components/Header/Message";
