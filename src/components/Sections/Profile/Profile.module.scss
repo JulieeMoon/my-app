@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex: 1 1 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.inside {
+  padding: 10px 20px;
+}
+
+.body1 {
+  display: flex;
+  min-width: 200px;
+  max-width: 500px;
+  width: 100%;
+  text-align: justify;
+  background: #D8D8D8;
+}
+
+.body2 {
+  flex: 1 1 auto;
+  display: flex;
+  min-width: 200px;
+  text-align: justify;
+  margin-left: 20px;
+  background: #D8D8D8;
+}
+
+.body3 {
+  flex: 1 1 auto;
+  display: flex;
+  min-width: 200px;
+  text-align: justify;
+  margin-left: 20px;
+  background: #D8D8D8;
+}
+

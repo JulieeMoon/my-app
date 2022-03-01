@@ -1,27 +1,31 @@
 import * as React from "react";
-import {Header} from "./components/Header/Header";
-import {Footer} from "./components/Footer/Footer";
-import {Body} from "./components/Body/Body";
 // @ts-ignore
 import s from './index.module.scss';
-import {News} from "./components/Header/News";
-import {Message} from "./components/Header/Message";
-import {Profile} from "./components/Header/Profile";
+import {Header} from "./components/SiteBody/Header";
+import {Footer} from "./components/SiteBody/Footer";
+import {Layout} from "./components/SiteBody/Layout";
 import {Route, Routes} from "react-router-dom";
+import {FC} from "react";
+import {All} from "./routes";
 
-const App = () => {
+interface IProps {}
+
+const App: FC<IProps> = () => {
     return (
         <div className={s.appSt}>
             <Header/>
-            <Body>
+            <Layout>
                 <Routes>
-                    <Route index element={<div>INDEX</div>}/>
-                    <Route path='/profile/*' element={<Profile/>}/>
-                    <Route path='/news/*' element={<News/>}/>
-                    <Route path='/message/*' element={<Message/>}/>
-                    <Route path='*' element={<div>ERROR</div>}/>
+                    {All.map((elem, idx) => (
+                        <Route
+                            index={elem.index}
+                            key={elem.path + idx}
+                            path={elem.route || elem.path}
+                            element={elem.element}
+                        />
+                    ))}
                 </Routes>
-            </Body>
+            </Layout>
             <Footer/>
         </div>
   );

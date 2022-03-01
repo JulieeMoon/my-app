@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.module.scss';
 import {App} from './App';
 import {BrowserRouter} from "react-router-dom";
+import {HelmetProvider} from "react-helmet-async";
 
 ReactDOM.render(
-    <BrowserRouter>
-            <App/>
-    </BrowserRouter>,
+    (
+        <HelmetProvider>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </HelmetProvider>
+    ),
     document.getElementById('root'));
 

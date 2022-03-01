@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    padding: 20px;
+    border-radius: 7px;
+    height: 100%;
+    min-height: 60px;
+    background: rgb(222, 222, 222);
+    box-shadow: 1px 1px 10px rgba(196, 196, 196, 0.76);
+}
+
+.box {
+    margin: 20px;
+}
+
+.text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #081570;
+}

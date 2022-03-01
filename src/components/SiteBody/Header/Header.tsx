@@ -1,9 +1,9 @@
 import * as React from "react";
 // @ts-ignore
 import s from "./Header.module.scss";
-import {Logo} from "./Logo";
+import {Logo} from "../../UI/Logo";
 import {NavLink} from "react-router-dom";
-import {MenuButton} from "./Button";
+import {MenuButton} from "../../UI/Button";
 
 let links = [
     {
@@ -28,7 +28,7 @@ const Header = () => {
         <header className={s.header}>
             <div className={s.container}>
                 <div>
-                    <Logo name={""}>
+                    <Logo>
                         <b> ❤</b>
                     </Logo>
                 </div>
@@ -36,7 +36,7 @@ const Header = () => {
                     <div className={s.navbar}>
                         {links.map(elem => (
                             <NavLink key={elem.id} to={elem.to} className={s.text}>
-                                <MenuButton>{elem.label}</MenuButton>
+                                <MenuButton className={s.text}>{elem.label}</MenuButton>
                             </NavLink>
                         ))}
                     </div>
