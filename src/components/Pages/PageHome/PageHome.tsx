@@ -3,7 +3,7 @@ import React, {FC} from "react";
 import s from "./PageHome.module.scss"
 import {Helmet} from "react-helmet-async";
 
-const PageHome: FC<any> = ({children}) => {
+export const PageHome: FC<any> = ({children}) => {
     return (
         <>
             <Helmet>
@@ -19,7 +19,5 @@ const PageHome: FC<any> = ({children}) => {
                 </div>
             </div>
         </>
-    );
-};
-
-export {PageHome};
+    )
+}

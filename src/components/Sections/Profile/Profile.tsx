@@ -3,7 +3,7 @@ import React, {FC} from "react";
 import s from "./Profile.module.scss"
 import {Helmet} from "react-helmet-async";
 
-const Profile: FC<any> = ({children}) => {
+export const Profile: FC<any> = ({children}) => {
     return (
         <>
             <Helmet>
@@ -33,7 +33,6 @@ const Profile: FC<any> = ({children}) => {
                 </div>
             </div>
         </>
-    );
-};
+    )
+}
 
-export {Profile};

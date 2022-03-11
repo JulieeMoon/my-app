@@ -4,6 +4,7 @@ import s from "./News.module.scss"
 import {Helmet} from "react-helmet-async";
 import {Preloader} from "../../UI/Preloader";
 import {DesignBox} from "../../UI/DesignBox";
+import {Link,} from "react-router-dom";
 
 type Post = {
     userId: number,
@@ -21,7 +22,7 @@ interface IProps {
     className?: string,
 }
 
-const News: FC<IProps> = ({}) => {
+export const News: FC<IProps> = ({}) => {
     const [state, setState] = useState<IState>({
         posts: null,
         limit: 10,
@@ -30,36 +31,34 @@ const News: FC<IProps> = ({}) => {
         try {
             const d = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${state.limit}`)
             const posts = await d.json()
-            setState((prevState) => {
-                return {...prevState, posts}
-            })
+            setState((prevState) => ({...prevState, posts}))
         } catch (e) {
             console.log('err', e)
         }
     }
     useEffect(() => {
         getPost()
-        return () => {
-            console.log('DELETE')
-        }
-    }, [])
+    }, [state.limit])
 
-    state.posts?.map(ele => ele.body)
+    const handleSelectChange = (e: any) => {
+        const limit = +e.target.value
+        console.log(limit)
+        setState({...state, limit})
+    }
 
     return (
         <>
             <Helmet>
                 <title>Новости</title>
             </Helmet>
-
             <div className={s.container}>
                 <div className={s.body1}>
                     <article className={s.inside}>
-                        <select id="select1" className={s.select}>
-                            <option value={"5"}>5</option>
-                            <option value={"10"}>10</option>
-                            <option value={"15"}>15</option>
-                            <option value={"30"}>30</option>
+                        <select className={s.select} value={state.limit} onChange={handleSelectChange}>
+                            <option value={5}>5</option>
+                            <option value={10}>10</option>
+                            <option value={15}>15</option>
+                            <option value={30}>30</option>
                         </select>
                         <div>
                             {!state.posts ? (
@@ -70,7 +69,9 @@ const News: FC<IProps> = ({}) => {
                                         state.posts.map(elem => (
                                             <DesignBox key={elem.id}>
                                                 <div>
-                                                    <h1>{elem.title}</h1>
+                                                    <Link to={`/news/${elem.id}`} className={s.link}>
+                                                        <h1>{elem.title}</h1>
+                                                    </Link>
                                                     <div>
                                                         <p>{elem.body}</p>
                                                     </div>
@@ -87,7 +88,6 @@ const News: FC<IProps> = ({}) => {
                 </div>
             </div>
         </>
-    );
-};
+    )
+}
 
-export {News}

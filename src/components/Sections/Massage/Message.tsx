@@ -3,7 +3,7 @@ import React, {FC} from "react";
 import s from "./Massage.module.scss"
 import {Helmet} from "react-helmet-async";
 
-const Message: FC<any> = ({children}) => {
+export const Message: FC<any> = ({children}) => {
     return (
         <>
             <Helmet>
@@ -26,7 +26,5 @@ const Message: FC<any> = ({children}) => {
                 </div>
             </div>
         </>
-    );
-};
-
-export {Message};
+    )
+}

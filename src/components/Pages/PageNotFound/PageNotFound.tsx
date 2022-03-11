@@ -4,7 +4,7 @@ import s from "./PageNotFound.module.scss"
 import {Helmet} from "react-helmet-async";
 import {NavLink} from "react-router-dom";
 
-const PageNotFound = () => {
+export const PageNotFound = () => {
     return (
         <>
             <Helmet>
@@ -20,7 +20,5 @@ const PageNotFound = () => {
                 </div>
             </div>
         </>
-    );
-};
-
-export {PageNotFound};
+    )
+}

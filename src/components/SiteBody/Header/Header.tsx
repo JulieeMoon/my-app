@@ -23,7 +23,7 @@ let links = [
     },
 ];
 
-const Header = () => {
+export const Header = () => {
     return (
         <header className={s.header}>
             <div className={s.container}>
@@ -46,4 +46,3 @@ const Header = () => {
     )
 }
 
-export {Header};

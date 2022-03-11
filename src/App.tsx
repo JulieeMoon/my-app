@@ -7,6 +7,7 @@ import {Layout} from "./components/SiteBody/Layout";
 import {Route, Routes} from "react-router-dom";
 import {FC} from "react";
 import {All} from "./routes";
+import {PostPage} from "./components/Sections/News/PostPage";
 
 interface IProps {}
 
@@ -24,6 +25,7 @@ const App: FC<IProps> = () => {
                             element={elem.element}
                         />
                     ))}
+                    <Route path="/news/:id" element={<PostPage/>} />
                 </Routes>
             </Layout>
             <Footer/>

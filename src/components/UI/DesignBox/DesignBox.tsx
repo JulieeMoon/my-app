@@ -3,7 +3,7 @@ import {FC} from "react";
 // @ts-ignore
 import s from './DesignBox.module.scss';
 
-const DesignBox: FC<any> = ({children, props}) => {
+export const DesignBox: FC<any> = ({children, props}) => {
     return (
         <div className={s.box}>
             <main className={s.container}>
@@ -13,4 +13,3 @@ const DesignBox: FC<any> = ({children, props}) => {
     )
 }
 
-export {DesignBox};
