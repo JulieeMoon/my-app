@@ -14,24 +14,27 @@ type Post = {
 }
 
 interface IState {
+    loading: boolean,
     limit: number,
-    posts: null | Post[]
+    posts: null | Post[],
 }
 
 interface IProps {
     className?: string,
 }
 
-export const News: FC<IProps> = ({}) => {
+export const News: FC<IProps> = ({className, children}) => {
     const [state, setState] = useState<IState>({
         posts: null,
         limit: 10,
+        loading: true,
     })
     const getPost = async () => {
+        setState((prevState) => ({...prevState, loading: true}))
         try {
             const d = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${state.limit}`)
             const posts = await d.json()
-            setState((prevState) => ({...prevState, posts}))
+            setState((prevState) => ({...prevState, posts, loading: false}))
         } catch (e) {
             console.log('err', e)
         }
@@ -61,11 +64,11 @@ export const News: FC<IProps> = ({}) => {
                             <option value={30}>30</option>
                         </select>
                         <div>
-                            {!state.posts ? (
+                            {state.loading ? (
                                 <Preloader/>
                             ) : (
                                 <>
-                                    {!!state.posts.length ? (
+                                    {!!state?.posts?.length ? (
                                         state.posts.map(elem => (
                                             <DesignBox key={elem.id}>
                                                 <div>
@@ -79,7 +82,9 @@ export const News: FC<IProps> = ({}) => {
                                             </DesignBox>
                                         ))
                                     ) : (
-                                        <div>Список пуст</div>
+                                        <DesignBox>
+                                            <div>Список пуст</div>
+                                        </DesignBox>
                                     )}
                                 </>
                             )}
