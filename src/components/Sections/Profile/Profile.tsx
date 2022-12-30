@@ -24,13 +24,6 @@ export const Profile: FC<any> = ({children}) => {
                         </div>
                     </article>
                 </div>
-                <div className={s.body3}>
-                    <article className={s.inside}>
-                        <div>
-                            {children}
-                        </div>
-                    </article>
-                </div>
             </div>
         </>
     )
