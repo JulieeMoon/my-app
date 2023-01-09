@@ -1,0 +1,17 @@
+.navbar {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    transition: all .07s ease-in-out;
+    color: #1ac1ff;
+  }
+}
+

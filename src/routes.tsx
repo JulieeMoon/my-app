@@ -1,9 +1,9 @@
 import * as React from "react";
-import {Message} from "./components/Sections/Massage";
-import {Profile} from "./components/Sections/Profile";
-import {News} from "./components/Sections/News";
+import {Courses} from "./components/Sections/Courses";
 import {PageHome} from "./components/Pages/PageHome";
 import {PageNotFound} from "./components/Pages/PageNotFound";
+import {Room} from "./components/Sections/Room";
+import {Profile} from "./components/Sections/Profile";
 
 type IRoute = {
   index?: boolean;
@@ -22,21 +22,21 @@ export enum routesKey {
 const All: IRoute[] = [
   {
     index: true,
+    path: "/room/*",
+    element: <Room />,
+    label: "Вебинарная комната",
+  },
+  {
+    index: true,
     path: "/profile/*",
     element: <Profile />,
-    label: "Профиль",
+    label: "Мой профиль",
   },
   {
     index: true,
-    path: "/news/*",
-    element: <News />,
-    label: "Новости",
-  },
-  {
-    index: true,
-    path: "/message/*",
-    element: <Message />,
-    label: "Сообщения",
+    path: "/courses/*",
+    element: <Courses />,
+    label: " Мои курсы",
   },
   {
     index: true,

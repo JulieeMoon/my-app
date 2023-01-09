@@ -1,21 +1,4 @@
-.bg1 {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(168, 12, 12, 0.21)
-}
-
-.bg2 {
-  flex: 1 1 auto;
-  display: flex;
-  max-width: 1540px;
-  background-color: rgba(25, 74, 180, 0.21);
-  width: 100%;
-
-}
-
-.bg2 .container {
+.container {
   display: flex;
   flex: 1 1 auto;
   padding-right: 20px;
@@ -39,6 +22,16 @@
 .body2 {
   flex: 1 1 auto;
   display: flex;
+  min-width: 200px;
+  text-align: justify;
+  margin-left: 20px;
+  background: #D8D8D8;
+}
+
+.body3 {
+  flex: 1 1 auto;
+  display: flex;
+  min-width: 200px;
   text-align: justify;
   margin-left: 20px;
   background: #D8D8D8;

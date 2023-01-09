@@ -1,23 +1,17 @@
+// @ts-ignore
 import React, {FC} from "react";
 // @ts-ignore
-import s from "./Massage.module.scss"
+import s from "./Room.module.scss"
 import {Helmet} from "react-helmet-async";
 
-export const Message: FC<any> = ({children}) => {
+export const Room: FC<any> = ({children}) => {
     return (
         <>
             <Helmet>
-                <title>Мессенджер</title>
+                <title>Вебинарная комната</title>
             </Helmet>
             <div className={s.container}>
                 <div className={s.body1}>
-                    <article className={s.inside}>
-                        <div>
-                            {children}
-                        </div>
-                    </article>
-                </div>
-                <div className={s.body2}>
                     <article className={s.inside}>
                         <div>
                             {children}
@@ -28,3 +22,4 @@ export const Message: FC<any> = ({children}) => {
         </>
     )
 }
+

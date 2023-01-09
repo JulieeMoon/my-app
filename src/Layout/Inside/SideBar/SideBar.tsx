@@ -1,4 +1,4 @@
-import * as React from "react";
+
 // @ts-ignore
 import s from "./SideBar.scss";
 import {NavLink} from "react-router-dom";
@@ -22,7 +22,7 @@ let links = [
     },
 ];
 
-export const SideBar = () => {
+export const SideBar = (props) => {
     return (
         <header className={s.sidebar}>
             <div className={s.container}>
