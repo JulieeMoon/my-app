@@ -1,6 +1,6 @@
 
 // @ts-ignore
-import s from "./SideBar.scss";
+import s from "./SideBar.module.scss";
 import {NavLink} from "react-router-dom";
 
 
@@ -22,20 +22,18 @@ let links = [
     },
 ];
 
-export const SideBar = (props) => {
+export const SideBar = () => {
     return (
-        <header className={s.sidebar}>
-            <div className={s.container}>
-                {!!links.length && (
-                    <div className={s.navbar}>
-                        {links.map(elem => (
-                            <NavLink key={elem.id} to={elem.to} className={s.text}>
-                                <div className={s.text}>{elem.label}</div>
-                            </NavLink>
-                        ))}
-                    </div>
-                )}
-            </div>
+        <header className={s.header}>
+            {!!links.length && (
+                <div className={s.navbar}>
+                    {links.map(elem => (
+                        <NavLink key={elem.id} to={elem.to} className={s.text}>
+                            <div className={s.text}>{elem.label}</div>
+                        </NavLink>
+                    ))}
+                </div>
+            )}
         </header>
     )
 }

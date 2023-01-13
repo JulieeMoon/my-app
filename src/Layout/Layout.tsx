@@ -10,7 +10,7 @@ export const Layout: FC<any> = ({children}) => {
         <div className={s.bg1}>
 
             <div className={s.header}>
-                <div className={s.htext}>header</div>
+                <div className={s.htext}><Header/></div>
             </div>
 
             <div className={s.bg2}>

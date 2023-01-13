@@ -1,8 +1,10 @@
 .bg1 {
   background-color: rgb(224, 233, 255);
+
 }
 
 .bg2 {
+  height:100vh;
   flex: 1 1 auto;
   margin: auto;
   display: flex;
@@ -40,7 +42,7 @@
 
 .menu {
   display: flex;
-  height:100vh;
+
   margin: 15px 10px 15px 30px;
   max-width: 250px;
   width: 30%;

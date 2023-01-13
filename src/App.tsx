@@ -1,12 +1,12 @@
 import * as React from "react";
 // @ts-ignore
 import s from './index.module.scss';
-import {Header} from "./Layout/Inside/Header";
 import {Layout} from "./Layout";
-import {Route, Routes} from "react-router-dom";
 import {FC} from "react";
-import {All} from "./routes";
-import {SideBar} from "./Layout/Inside/SideBar";
+// import {Header} from "./Layout/Inside/Header";
+// import {Route, Routes} from "react-router-dom";
+// import {All} from "./routes";
+// import {SideBar} from "./Layout/Inside/SideBar";
 
 
 interface IProps {}
